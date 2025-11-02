@@ -32,29 +32,21 @@ py -m venv .venv
 # macOS / Linux
 source .venv/bin\activate
 
-Install dependencies:
+## Install Dependencies
 
 py -m pip install --upgrade pippy -m pip install -r requirements.txt
-Run demo modules
+
+## Run demo modules
 From the project root:
 
-
 python -m analytics_project.demo_module_basicspython -m analytics_project.demo_module_statspython -m analytics_project.demo_module_vizpython -m analytics_project.demo_module_languages# Or run the orchestrator:python -m analytics_project.main
-Tests
-Run the test suite with pytest:
 
-
-pytest -q
-Daily workflow (common commands)
+## Daily workflow (common commands)
 
 git pull# update deps (project uses uv / uvx helper tooling if available)uv sync --extra dev --extra docs --upgradeuvx ruff check --fixuv run pre-commit run --all-filespytest
-Docs
-Build and serve docs locally:
 
-
-uv run mkdocs build --strictuv run mkdocs serve
-Notes
-Logging is configured via src/analytics_project/utils_logger.py.
-Follow STRUCTURE.md when adding code, data, notebooks, and tests.
-Use small, frequent commits and push to GitHub to preserve progress.
+## Notes
+-Logging is configured via src/analytics_project/utils_logger.py.
+-Follow STRUCTURE.md when adding code, data, notebooks, and tests.
+-Use small, frequent commits and push to GitHub to preserve progress.
 
