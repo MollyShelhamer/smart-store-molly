@@ -132,13 +132,13 @@ def insert_customers(customers_df: pd.DataFrame, cursor: sqlite3.Cursor) -> None
 def insert_products(products_df: pd.DataFrame, cursor: sqlite3.Cursor) -> None:
     """Insert product data into the product table."""
     logger.info(f"Inserting {len(products_df)} product rows.")
-    products_df.to_sql("product", cursor.connection, if_exists="append", index=False)
+    products_df.to_sql("product", cursor.connection, if_exists="replace", index=False)
 
 
 def insert_sales(sales_df: pd.DataFrame, cursor: sqlite3.Cursor) -> None:
     """Insert sales data into the sales table."""
     logger.info(f"Inserting {len(sales_df)} sale rows.")
-    sales_df.to_sql("sale", cursor.connection, if_exists="append", index=False)
+    sales_df.to_sql("sale", cursor.connection, if_exists="replace", index=False)
 
 
 def load_data_to_db() -> None:
