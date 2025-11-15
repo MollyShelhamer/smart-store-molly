@@ -126,7 +126,7 @@ def delete_existing_records(cursor: sqlite3.Cursor) -> None:
 def insert_customers(customers_df: pd.DataFrame, cursor: sqlite3.Cursor) -> None:
     """Insert customer data into the customer table."""
     logger.info(f"Inserting {len(customers_df)} customer rows.")
-    customers_df.to_sql("customer", cursor.connection, if_exists="append", index=False)
+    customers_df.to_sql("customer", cursor.connection, if_exists="replace", index=False)
 
 
 def insert_products(products_df: pd.DataFrame, cursor: sqlite3.Cursor) -> None:
