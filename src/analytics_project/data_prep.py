@@ -31,7 +31,7 @@ def clean_with_scrubber(df: pd.DataFrame) -> pd.DataFrame:
 
 def clean_file(filename: str):
     input_path = RAW_DIR / filename
-    output_path = PREPARED_DIR / filename.replace(".csv", "_prepared.csv")
+    output_path = PREPARED_DIR / filename.replace("_data.csv", "_prepared.csv")
 
     if not input_path.exists():
         print(f"⚠️ File not found: {input_path}")
