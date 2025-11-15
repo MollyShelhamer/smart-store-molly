@@ -203,7 +203,7 @@ def load_data_to_db() -> None:
         # Rename sales_df columns to match database schema if necessary
         sales_df = sales_df.rename(
             columns={
-                "saleid": "sale_id",
+                "transactionid": "sale_id",
                 "date": "date",
                 "customerid": "customer_id",
                 "productid": "product_id",
