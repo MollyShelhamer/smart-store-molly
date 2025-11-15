@@ -176,12 +176,12 @@ def load_data_to_db() -> None:
         # Clean column name : Database column name
         customers_df = customers_df.rename(
             columns={
-                "CustomerID": "customer_id",
-                "Name": "name",
-                "Region": "region",
-                "JoinDate": "join_date",
-                "RewardPoints": "reward_points",
-                "LoyaltyTier": "loyalty_tier",
+                "customerid": "customer_id",
+                "name": "name",
+                "region": "region",
+                "joindate": "join_date",
+                "rewardpoints": "reward_points",
+                "loyaltytier": "loyalty_tier",
             }
         )
         logger.info(f"Customer columns (cleaned): {list(customers_df.columns)}")
@@ -203,16 +203,16 @@ def load_data_to_db() -> None:
         # Rename sales_df columns to match database schema if necessary
         sales_df = sales_df.rename(
             columns={
-                "SaleID": "sale_id",
-                "Date": "date",
-                "CustomerID": "customer_id",
-                "ProductID": "product_id",
-                "StoreID": "store_id",
-                "CampaignID": "campaign_id",
-                "Quantity": "quantity",
-                "SalesAmount": "sales_amount",
-                "ItemsPurchased": "items_purchased",
-                "StoreCreditCard": "store_credit_card",
+                "saleid": "sale_id",
+                "date": "date",
+                "customerid": "customer_id",
+                "productid": "product_id",
+                "storeid": "store_id",
+                "campaignid": "campaign_id",
+                "quantity": "quantity",
+                "salesamount": "sales_amount",
+                "itemspurchased": "items_purchased",
+                "storecreditcard": "store_credit_card",
             }
         )
 
