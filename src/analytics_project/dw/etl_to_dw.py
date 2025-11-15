@@ -204,7 +204,7 @@ def load_data_to_db() -> None:
         sales_df = sales_df.rename(
             columns={
                 "transactionid": "sale_id",
-                "date": "date",
+                "saledate": "sale_date",
                 "customerid": "customer_id",
                 "productid": "product_id",
                 "storeid": "store_id",
