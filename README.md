@@ -11,6 +11,10 @@ This repo contains ETL scripts, data prep utilities, logging helpers, tests, and
   - `analytics_project.data_prep`
   - `analytics_project.data_scrubber`
 
+## Operating System and Tool Choices
+- **Operating System:** Windows 11
+- **Tools:** Python 3.x, Power BI, SQLite, loguru  
+
 ## How to Run
 Create and activate a virtual environment:
 ```
@@ -31,6 +35,12 @@ uv run python -m analytics_project.dw.etl_to_dw
 Run the demo:
 ```
 uv run python -m analytics_project.main
+```
+
+## Logging
+Uses `loguru` for structured logging:
+```
+2025-11-15 12:56:30.386 | INFO | data_prep: Loaded customers_data.csv
 ```
 
 ## Data Prep (data_prep.py)
@@ -79,19 +89,23 @@ Cleaned data is moved to data/warehouse/smart_sales.db using etl_to_dw.py
 | quantity       | INT         |
 | total_amount   | NUMERIC     |
 
-## Logging
-Uses `loguru` for structured logging:
-```
-2025-11-15 12:56:30.386 | INFO | data_prep: Loaded customers_data.csv
-```
+## SQL Queries and Reports
+- SQL queries extract and aggregate sales, product, and customer data from the warehouse.
+- Reports include:
+  - **Slice operations:** Top Spending Customers can be filtered/sliced by a range of join dates.
+  - **Dice operations:** Product Rating can be viewed across product categories and wether or not the product is seasonal.
+  - **Drilldown operations:** Sales can be viewed by Year, Quarter, or Month.
 
-## Development
-Format code:
-```
-uv run ruff format .
-```
+### Screenshots
 
-Run tests:
-```
-uv run pytest
-```
+#### Power BI Model View or Spark SQL Schema
+![alt text](image.png)
+
+#### Slice Operation Results
+*Paste screenshot here*
+
+#### Dice Operation Results
+*Paste screenshot here*
+
+#### Drilldown Operation Results
+*Paste screenshot here*
