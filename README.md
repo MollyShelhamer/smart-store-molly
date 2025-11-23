@@ -96,16 +96,17 @@ Cleaned data is moved to data/warehouse/smart_sales.db using etl_to_dw.py
   - **Dice operations:** Product Rating can be viewed across product categories and wether or not the product is seasonal.
   - **Drilldown operations:** Sales can be viewed by Year, Quarter, or Month.
 
-### Screenshots
-
-#### Power BI Model View or Spark SQL Schema
+#### Power BI Model View
 ![alt text](image.png)
 
 #### Slice Operation Results
-*Paste screenshot here*
+![alt text](image-1.png)
 
 #### Dice Operation Results
-*Paste screenshot here*
+![alt text](image-2.png)
 
 #### Drilldown Operation Results
-*Paste screenshot here*
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
+
