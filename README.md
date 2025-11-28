@@ -110,3 +110,39 @@ Cleaned data is moved to data/warehouse/smart_sales.db using etl_to_dw.py
 ![alt text](image-4.png)
 ![alt text](image-5.png)
 
+## OLAP Analysis
+
+#### The Business Goal
+- What trends are present within the rewards program? 
+  
+#### Data Source
+- The data warehouse (smart_sales.db) is the only source for this analysis.
+
+#### Tools
+- PowerBI was used for all visualizations.
+
+#### Workflow and Logic
+  - **Slice operations:** The count of customers who joined each month can be filtered by any range of dates. 
+  - **Dice operations:** Region is also taken into account when looking at the count of customers over time.
+  - **Drilldown operations:** Trends in join date can be seen across years, quarters, months, and days.
+
+#### Results
+![alt text](image-6.png)
+- Across the whole dataset, the month with most instances of customers joining the rewards program is October.
+  
+![alt text](image-7.png)
+- There is variation in trends across all regions, new joins appear sparse in the South and South-West, but consistent each month in the East.
+
+![alt text](image-10.png)
+- 2023 has the highest count of new joins.
+
+![alt text](image-11.png)
+- Quarters 2, 3, and 4 have a consistent amount of customer joins. Quarter 1 appears significantly lower.
+
+#### Suggested Business Action
+- Find which promotions were advertised and offered during periods of higher join dates, and consider pushing these offers to areas and time-periods of consistently low joins.
+
+#### Challenges
+- When attempting to create a slicer using the join_date field, I was unable to select the 'between' option. I had realized that my join_date was stored as text, not date. I easily switched this in table view of PowerBI and after refreshing, was able to select the correct slicer type.
+
+
