@@ -127,7 +127,7 @@ Cleaned data is moved to data/warehouse/smart_sales.db using etl_to_dw.py
   - **Drilldown operations:** Trends in join date can be seen across years, quarters, months, and days.
 
 #### Results
-![alt text](image-6.png)
+![alt text](images/image-6.pngimage-6.png)
 - Across the whole dataset, the month with most instances of customers joining the rewards program is October.
   
 ![alt text](image-7.png)
